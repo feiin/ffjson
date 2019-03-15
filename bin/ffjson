@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const cj = require('color-json');
+const ffjson = require('../index');
+
+function main() {
+    var stdin = process.stdin;
+    stdin.resume();
+    stdin.setEncoding('utf8');
+    stdin.on('data', function (chunk) {
+
+        let results = ffjson.filterFormatJSON(chunk.toString());
+        for (let item of results) {
+            if (item.isJson) {
+                process.stdout.write(cj(item.content));
+            } else {
+                process.stdout.write(item.content);
+            }
+        }
+    });
+    stdin.on('end', function () {
+        process.exit()
+    });
+
+}
+
+main()

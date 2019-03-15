@@ -1,0 +1,33 @@
+{
+  "name": "ffjson",
+  "version": "1.0.0",
+  "description": "filter and format json in the strings",
+  "main": "index.js",
+  "bin": {
+    "ffjson": "./bin/ffjson"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feiin/ffjson.git"
+  },
+  "keywords": [
+    "petapoco"
+  ],
+  "author": "feiin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feiin/ffjson/issues"
+  },
+  "preferGlobal": true,
+  "homepage": "https://github.com/feiin/ffjson",
+  "dependencies": {
+    "color-json": "^2.0.0"
+  },
+  "devDependencies": {
+    "should": "^13.2.3",
+    "mocha": "^6.0.2"
+  }
+}
